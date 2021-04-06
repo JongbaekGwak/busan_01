@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 자바스크립트의 변수는 저장되는 데이터 타입을 따지지 않음(모든 데이터 타입 사용가능)
+    // 자바스크립트의 변수는 저장된 데이터의 타입을 미리 확인하지 않고, 저장한 후 그 데이터의 데이터 타입을 자동으로 확인함
+    // 자바의 경우 int num = 10; string str = "문자열"; boolean  flag = true;
+    var num = 10;
+    console.log("num 변수 : " + typeof num + "타입");
+    console.log("--- 데이터 값 변경 후 ---");
+    var num = "홍길동";
+    console.log("num 변수 : " + typeof num + "타입");
+
+    console.log("\n\n----------------\n\n");
+
+    stdName = "홍길동";  //변수 선언기호 무시 / 변수가 선언됨
+    comGrade = 96;     
+    var stdName;       //기존의 변수를 재활용홤
+    var comGrade;      
+    console.log("학생 이름 : " + stdName);
+    console.log("컴퓨터 점수 : " + comGrade);
+
+    // var stdName;       //기존의 변수를 재활용홤
+    // var comGrade;      
+    // stdName = "홍길동";  //변수 선언기호 무시 / 변수가 선언됨
+    // comGrade = 96;     
+    
+
+  </script>
+
+</body>
+
+</html>

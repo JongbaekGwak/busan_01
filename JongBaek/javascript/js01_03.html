@@ -1,0 +1,69 @@
+<!-- <!DOCTYPE html> 는 html5 를 사용한다는 의미 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <script type="text/srcipt"></script> 로 입력하는 것이 정석 방식 -->
+  <!-- 현재 자바스크립트가 웹의 기본 스크립트로 지정되어 있기 때문에 <script></script> 형태로 입력해도 상괍없음 -->
+
+  <!-- html, css, js 는 기본적으로 위에서 아래로 한 라인씩 해석하여 진행 -->
+  <!-- 자바스크립트 이벤트 사용 시 자바스크립트가 html태그보다 위쪽에 입력이 되어 있을 경우 원하는 html 태그가 로드되기 전에 자바스크립트 소스가 실행되어 오류가 발생하게 됨 -->
+  <!-- 이러한 경우를 제거하기 위해서 자바스크립트에서 이벤트를 사용하여 모든 html 태그가 로드된 후 자바스크립트가 동작하도록 하고 있음 -->
+  <!-- 1. window.onlord 이벤트 사용 -->
+  <!-- 기본 자바스트립트 이벤트로 동장 -->
+  <!-- 모든 컨텐츠가 로드된 후 동작하는 이벤트 -->
+  <!-- 구형 웹 브라우저에서 사용가능 -->
+  <!-- 2. DOMcontentLoaded 이벤트 사용 -->
+  <!-- 기본 자바스크립트 이벤트로 동작 -->
+  <!-- 모든 ㅗ싀 태그가 로드된 후 동작하는 이벤트 -->
+  <!-- 구형 웹 브라우저에서 사용 불가능 (IE8 이하에서 동작X) -->
+  <!-- 3. JQuery의 ready 이벤트 사용 -->
+  <!-- 기본적으로 DOMContentLoaded와 동일한 방식으로 저장 -->
+  <!-- JQuery의 ready 방식을 사용하기 위해선 jquery 리드 필수-->
+  <script>
+    // window.onload = function () {
+    //   var btn1 = document.getElementById("btn1");
+    //   btn1.addEventListener("click", function () {
+    //     alert("버튼1 클릭했습니다.");
+    //   });
+    // }
+
+// window.addEventListener = "DOMContentLoaded", function(){
+//   var btn1 = document.getElementById("btn1");
+//       btn1.addEventListener("click", function () {
+//         alert("버튼1 클릭했습니다.");
+//       });
+// }
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    // 3번 jquery의 ready 방식
+    $(document).ready(function (){
+      var btn1 = document.getElementById("btn1");
+      btn1.addEventListener("click", function () {
+        alert("버튼1 클릭했습니다.");
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <button id="btn1">클릭!!</button>
+  <button id="btn2">클릭!!</button>
+
+  <script>
+    var btn2 = document.getElementById("btn2");
+    btn2.addEventListener("click", function () {
+      alert("버튼2 클릭했습니다.");
+    });
+  </script>
+</body>
+
+</html>
