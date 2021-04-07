@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연산자</title>
+
+  <script>
+    var str1 = "hello";
+    var str2 = "world";
+    console.log(str1);
+    console.log(str2);
+    // 2개의 문자열을 문자열 연산자 + 로 연결하여 하나의 문자열로 변경
+    var str3 = str1 + str2;
+    console.log(str3);
+    console.log("hello" + "world");
+    console.log(str1 + str2);
+
+    // 특징 : 문자 열과 다른 데이터타입을 문자열 연결 연산으로 연결하면 모두 문자열로 변경.
+
+    // "100"이 숫자 100으로 보이지만, 실제로는 문자열 테이터인 "100"이므로 순가다 아님, 숫자 10과 문자열 "100"을 연산할 수 없으므로 숫자 10을 문자열 "10"으로 변경하고 문자열 "100"과 연결하여 "10010"으로 표현
+    var str4 = "100" + 10;
+    var str5 = 100 + 10;
+    console.log(str4);
+    console.log(str5);
+
+    // "true"는 문자열이고, false는 논리형 테이터 이므로 서로 연산이 불가능하여, 논리형 테이터인 false를 문자열로 변경하여 "true" + "false" 가 되어 두 문자열을 연결한 형태로 출력함
+    var str6 = "ture" + false;
+    console.log(str6);
+
+    console.log("\n\n----------------\n\n");
+
+    // 산출 연산자
+    var incData = 1;
+    var decData = 5;
+    var r1 = 0;
+    var r2 = 0;
+    r1 = 15 % 6; // 나머지 연산
+    console.log("15%6 = " + r1);
+    console.log("incData++ = " + incData++); //후위 증가
+    console.log("++incData = " + ++incData); //전위 증가
+    console.log("decData-- = " + decData--); //후위 증가
+    console.log("--decData = " + --decData); //전위 증가
+    r2 = incData * decData //곱셈 연산
+    console.log("incData*decData =" + r2);
+
+    //대입 연산자
+    //연산(계산)된 데이터를 지정한 변수에 활당하기 위한 연산자, 연산 방향이 오른쪽에서 왼쪽임, 우선순위 가장낮음
+    //산술 연잔자와 대입연산자가 합쳐진 형태도 존재함
+    var x1 = 10;
+    var x2 = 10;
+    var x3 = 10;
+    var x4 = 10;
+    var x5 = 10;
+    var st = "hello";
+
+    x1 = x1 + 1;
+    console.log("x1 =" + x1);
+    x1 = 10;
+    x1 += 1; // x1 = x1 + 1; 을 짧게 사용하기 위해서 사용하는 방법, 의미 및 결과는 동일함
+    console.log("x1 =" + x1);
+    x2 -= 2;
+    x3 *= 3;
+    x4 /= 4;
+    x5 %= 5;
+    console.log("x2 = " + x2);
+    console.log("x3 = " + x3);
+    console.log("x4 = " + x4);
+    console.log("x5 = " + x5);
+    st += "Javascript";
+    console.log("st = " + st);
+
+    console.log("\n\n-------------------------\n\n");
+
+    // 비교 연산자
+    // 두 피연산자의 값을 비교하여 참인지 거짓인지 확인하는 연산자
+    // 왼쪽 피연산자를 기준으로 하여 연산
+    // <(보다 작다, 미만), <=(작거나 같다, 이하), >(보다 크다, 초과), >=(크거나 같다, 이상), ==(같다), !=(다르다)
+    var x = 5;
+    var y = 5;
+    var result;
+
+    console.log("x > y = " + (x > y)); //x가 y보다 작다 false
+    console.log("x == y =" + (x == y)); //x와 y는 같다 true
+    console.log("x === y =" + (x === y)); //x와 y는 값 또는 타입이 같다 true
+    console.log("x != y =" + (x != y)); //x와 y는 다른다 false
+    console.log("x !== y =" + (x !== y)); //x와 y는 값 또는 타입이 다르다 false
+
+    x = 100;
+    y = "100";
+    // 자바스크립트는 규칙이 느슨한 프로그램언어이므로 아래와 같은 상황이 발생함
+    console.log("x == y =" + (x == y)); //x와 y는 같다 true
+    console.log("x === y =" + (x === y)); //x와 y는 같다 false
+
+    console.log("\n\n-----------------\n\n");
+
+    var x = 5;
+    var y = 7;
+    var result;
+
+    result = (x < 10 && y > 10);
+    console.log("(x<10 && y>10 =" + result); // flase
+    result = (x < 10 || y > 10);
+    console.log("(x<10 || y>10 =" + result); // true
+    result = !(x < 10 && y > 10);
+    console.log("!(x<10 && y>10 =" + result); // true
+
+    console.log("\n\n--------------\n\n");
+
+    var x = 5;
+    var y = 7;
+    var result;
+    result = (x > y) ? x : y;
+    console.log("큰 값 =" + result);
+    result = (x > y) ? x - y : y - x;
+    console.log("큰 값 - 작은 값 =" + result);
+
+    console.log("\n\n---------------------\n\n");
+
+    if (x > y) {
+      result = x;
+    }
+    else {
+      result = y;
+    }
+    console.log("큰 값 :" + result);
+    if (x > y) {
+      result = x - y;
+    }
+    else {
+      result = y - x;
+    }
+    console.log("작은 값 :" + result)
+
+    console.log("\n\n---------------------\n\n");
+
+    // 단항 연산자
+    // 피연산자가 1개만 존재하는 연산자
+    // ++(증가 연산자), --(감소 연산자), !(부정 연산자) 가 존재
+    // ++ 연산자는 피 연산자의 데이터를 1 증가. -- 연산자는 피 연산자의 데이터를 1 감소
+    // ++, -- 연산자는 전치 연산과 후치 연산이라는 개념이 추가되어 있음
+    // 전치 연산은 피 연산자가 앞에 연산자가 존재하며,  연산 후 데이터를 사용하는 형태
+    // 후치 연산은 피 연산자가 뒤에 연산자가 존재하며, 데이터 이용 후 연산을 진행하는 형태
+    // 전치 연산이나 후치 연산이 한 라인에 혼자 있을 경우는 전치 연산이나 후치 연산의 차이가 없음
+    // 다른 연산식과 함께 사용 시 전치 혹은 후치 연산의 특징을 
+
+    var x = 10;
+    console.log("x의 값 :" + x);
+    x++; // 후치 연산을 진행
+    console.log("++사용 후 x의 값 :" + x);
+    --x; // 전치 연산을 진행
+    console.log("--사용 후 x의 값 :" + x);
+
+    console.log("\n\n----------------\n\n");
+
+    x = 10;
+
+    console.log("현재 x의 값 :" + x);
+    console.log("전치 증가연산 후 x의 값 :" + ++x);
+    console.log("후치 증가연산 후 x의 값 :" + x++);
+    console.log("현재 x의 값 :" + x);
+    console.log("후치 감소연산 후 x의 값 :" + x--);
+    console.log("전치 감소연산 후 x의 값 :" + --x);
+    console.log("현재 x의 값 :" + x);
+
+    // 연산자 우선순위
+    // 1. () : 괄호, 가장 우선순위가 빠름
+    // 2. ++, --, ! : 단환 연산자
+    // 3. *, /, %, +, - : 산술 연산자, 수학과 같이 *, /, %가 +, - 보다 운선순위가 높음
+    // 4. <, <=, >, >=, ==, !=, ===, !== : 비교 연산자
+    // 5. &&, || : 논리 연산자, 논리 부정연산자는 단항 연산자로써 우선순위가 빠름
+    // 6. =, +=, -=, *=, /=, %= : 대입 연산자, 우선 순위가 가장 납음, 연산 방향도 오쯘쪽에서 왼쪽
+
+    console.log("\n\n-------이스케이프 문자-----------\n\n");
+    // 이스케이프 문자
+    // 문자열 내에서 동작하는 문자로 특정 기능을 가지고 있는 문자
+    // 문자열 내에 \ + 지정된 영문자 1개로 이루어져 있음
+    // \n : new line, \f와 \r이 합쳐진 기능
+    // \t : 탭 기능 사용
+    // \' : 문자로서의 ' 을 출력
+    // \" : 문자로서의 " 을 출력
+    // \\ : 문자로서의 \ 를 출력, 파일관련 프로그래밍 시 많이 사용함
+
+    // \d : 뻭스페이스바 기능
+    // \f : 폼피드, 키보드 위치를 가장 앞으로
+    // \r : 캐리지 리턴, 현재 위치에서 한 라인 아래로
+    // \v : 세로 탭
+
+    console.log("이\n스\n케\n이\n프\t\t\t문자 사용하기");
+    console.log("이스케이프 \"문자\" 사용하기");
+    console.log('이스케이프 \'문자\' 사용하기');
+    console.log('이스케이프 \\문자 사용하기');
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
