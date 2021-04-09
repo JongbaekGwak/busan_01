@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <style>
+    #n1 {
+      background-color: yellowgreen;
+    }
+
+    #n2 {
+      background-color: gray;
+    }
+
+    #n3 {
+      background-color: darkgray;
+    }
+
+    table {
+      width: 100%;
+      text-align: center;
+    }
+
+    #bt_01:link {
+      text-decoration: none;
+    }
+
+    #bt_01 {
+      color: white;
+    }
+  </style>
+  <title>어비스의 보물 이용권</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo-aion.png" alt="AION" width="100">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="intro" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              게임소개
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="intro">
+              <li><a class="dropdown-item" href="#">게임소개</a></li>
+              <li><a class="dropdown-item" href="#">아트</a></li>
+              <li><a class="dropdown-item" href="#">스토리</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="board" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              소식
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="board">
+              <li><a class="dropdown-item" href="#">공지</a></li>
+              <li><a class="dropdown-item" href="#">이벤트</a>
+              </li>
+              <li><a class="dropdown-item" href="#">핫이슈</a>
+              </li>
+              <li><a class="dropdown-item" href="#">업데이트 연대기</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="guidebook" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              게임정보
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="guidebook">
+              <li><a class="dropdown-item" href="#">가이드북</a></li>
+              <li><a class="dropdown-item" href="#">밸런스
+                  연구소</a></li>
+              <li><a class="dropdown-item" href="#">신규/복귀 가이드</a></li>
+              <li><a class="dropdown-item" href="#">PC방 혜택</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="world" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              월드
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="world">
+              <li><a class="dropdown-item" href="#">랭킹</a></li>
+              <li><a class="dropdown-item" href="#">데바 일정표</a></li>
+              <li><a class="dropdown-item" href="#">캐릭터</a></li>
+              <li><a class="dropdown-item" href="#">레기온</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="comm" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              커뮤니티
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="comm">
+              <li><a class="dropdown-item" href="#">서버</a></li>
+              <li><a class="dropdown-item" href="#">아이온</a></li>
+              <li><a class="dropdown-item" href="#">이미지</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="nshop" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              아이온N샵
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="nshop">
+              <li><a class="dropdown-item" href="#">라이브N샵</a></li>
+              <li><a class="dropdown-item" href="#">클래십십N샵</a></li>
+            </ul>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">NCTV</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">아이온
+              클래식</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="검색" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" style="width: 100px;">검색</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+ <small>
+  <nav
+  style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+  aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">이벤트</a></li>
+    <li class="breadcrumb-item active" aria-current="page">어비스의 보물 이용권</li>
+  </ol>
+</nav>
+ </small>
+
+  <center>
+    <img src="img/aion_02.jpg" width="80%">
+  </center>
+
+  <div style="margin: 30px;"></div>
+
+  <div class="container">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          시엘의 기운이란?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          아이온 클래식은 기본적으로 별도의 요금 없이 무료료 접속이 가능하지만, 원활한 플레이를 위해 시엘의 기운이 필요합니다.<br>
+          시엘의 기운은 <strong>이용권</strong>을 <strong>구매</strong>하거나 아이온 가맹점 PC방에서 접속 시 상시 적용됩니다.<br>
+          <p></p>
+          <button type="button" class="btn btn-warning"><a id="bt_01"
+              href="https://aion.plaync.com/guidebook/classic/view?title=%EC%8B%9C%EC%97%98%EC%9D%98%20%EA%B8%B0%EC%9A%B4%20%EC%9D%B4%EC%9A%A9%EA%B6%8C"
+              target="_blank">
+              시엘의 기운 이용권 가이드 바로가기 &#62;
+            </a></button>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          이용권 상품 안내
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          클래식N샵의 이용권 카테고리에서 아래 상품을 만나 보실 수 있습니다.<br>
+          클래식N샵은 아이온 공식 폼페이지의 [아이온N샵 > 클래식N샵]이나 인 게임 내 [N샵] 아이콘을 통해 이용하실 수 있습니다.<br><br>
+          <ul>
+            <li>90일 이용권 판매 기간 : 2021. 4. 7.(수) 정기점검 후 ~ 5. 19.(수) 정기점검 전</li>
+            <li>이용권 상품<br>
+            </li>
+          </ul>
+          <table border="3">
+            <tr id="n1">
+              <td>상품명</td>
+              <td>구성</td>
+              <td>가격</td>
+              <td>적립 포인트</td>
+              <td>특이 사항</td>
+            </tr>
+            <tr id="n2">
+              <td>시엘의 기운 30일 이용권</td>
+              <td>시엘의 기운 30일 이용권</td>
+              <td>19,800C</td>
+              <td>198P</td>
+              <td>선물 가능</td>
+            </tr>
+            <tr id="n3">
+              <td>어비스의 보물 90일 이용권</td>
+              <td>시엘의 기운 90일 이용권<br>
+                최상습 고대의 왕관<br>
+                붉은 주먹 케루빔의 알(30일) 1개</td>
+              <td>47,520C</td>
+              <td>713P</td>
+              <td>선물 가능<br>
+                계정당 1회 사용 가능</td>
+            </tr>
+          </table>
+          <div>
+            ※ 어비스의 보물 90일 이용권은 계정당 1회 사용 가능합니다. (선물 받기 포함)<br>
+            ※ 어비스의 보물 90일 이용권의 사용 이력이 있는 계정은 시엘의 기운 90일 이용권 구매/선물 받기를 할 수 없습니다.
+          </div>
+          <table border="3">
+            <tr id="n1">
+              <td>아이템 명</td>
+              <td>내용</td>
+              <td>거래/판매대행</td>
+              <td>창고</td>
+
+            </tr>
+            <tr id="n2">
+              <td>최상급 고대 왕관</td>
+              <td>NPC를 통해 어비스 포인트로 교환할 수 있습니다</td>
+              <td>X / X</td>
+              <td>개인O / 계정X / 레기온X</td>
+
+            </tr>
+            <tr id="n3">
+              <td>붉은 주먹 케루빔의 알(30일)</td>
+              <td>펫 분양사 NPC를 통해 16칸 인벤토리를 가진<br>
+                '붉은 주먹 케루빔' 을 분양받을 수 있습니다.<br>
+                펫은 분양시점부터 30일 동안 이용 가능합니다.<br>
+              <td>O / O</td>
+              <td>개인O / 계정O / 레기온X</td>
+            </tr>
+          </table>
+
+          <p></p>
+          <button type="button" class="btn btn-warning"><a id="bt_01"
+              href="https://aionnshop.plaync.com/aionc/goods/detail?dgi=411422&_ga=2.168346849.1965214260.1617707385-1907461030.1615603237"
+              target="_blank">
+              어비스의 보물 90일 이용권 바로 가기 &#62;
+            </a></button>
+
+          <p></p>
+
+          <pre>
+<p style="color: red;">※ 주의사항</p>
+1. 어비스의 보물 90일 이용권 상품에 포함된 최상급 고대의 왕관, 붉은 주먹 케루빔의 알(30일) 은 클래식 서버에만 사용 및 수령하실 수 있습니다.
+2. 구매하시는 상품에 포함된 아이템의 속성을 반드시 확인해 주시기 바랍니다.
+3. 어비스의 보물 90일 이용권은 계정당 1회 사용 가능합니다.
+4. 사용 중인 이용권이 있는 상태에서 추가 구매하신 이용권은 예약 대기 상태로 전환됩니다.
+5. 어비스의 보물 90일 이용권 상품에 포함된 최상급 고대의 왕관, 붉은 주먹 케루빔의 알(30일)은 이용권의 예약 결제와 상관없이 구매 직후 즉시 배송됩니다
+6. 사용 및 수령하신 최상급 고대의 왕관, 붉은 주먹 케루빔의 알(30일)은 타 계정으로의 이동 및 환불이 되지 않으므로 주의하시기 바랍니다.
+7. 최상급 고대의 왕관, 붉은 주먹 케루빔의 알(30일)은 구매 후 [7일 이내+미사용]인 경우, 청약철회(구매취소)가 가능해집니다.
+8. 청약철회 기간이 지난 최상급 고대의 왕관, 붉은 주먹 케루빔의 알(30일)은 환불받으실 수 없습니다.
+9. 붉은 주먹 케루빔의 이용 기간이 만료될 경우, 펫 인벤토리 내 아이템이 캐릭터에게로 돌아옵니다.
+10. 본 프로모션의 경우 추후 동일하거나 유사한 형태로 다시 진행될 수 있습니다.
+11. 본 상품과 동일하거나 유사한 상품이 추후 다시 판매될 수 있습니다.
+12. 본 프로모션은 조기 종료되거나, 기간이 연장될 수 있습니다.
+13. 본 프로모션은 아이온 이벤트 규약을 따릅니다.
+14. 상품 구성 및 환불에 관한 자세한 내용은 클래식 N샵 어비스의 보물 90일 이용권 구매 페이지에서 확인하실 수 있습니다.
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p></p>
+
+  <div class="container">
+    <p>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        자세한 내용 확인
+      </a>
+      <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+        aria-expanded="false" aria-controls="collapseExample">
+        Button with data-bs-target
+      </button> -->
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        <a href="https://aion.plaync.com/board/clsnotice/view?articleId=1083894" target="_blank">아이온 홈체이지 이동</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
