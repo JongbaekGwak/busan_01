@@ -5,17 +5,24 @@
   <style>
     td,
     th {
-      border:1px solid black;
+      border: 1px solid black;
       empty-cells: hide;
     }
-    
+
     table {
       margin-left: 10%;
       border-collapse: collapse;
       width: 80%;
       empty-cells: hide;
       text-align: center;
-      table-layout:auto;
+      table-layout: auto;
+    }
+
+    #img1 {
+      width: 50px;
+      background: url(IMG_0173.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   </style>
 
@@ -24,7 +31,9 @@
 
 <body>
   <table>
-    <caption><h1>이 력 서</h1></caption>
+    <caption>
+      <h1>이 력 서</h1>
+    </caption>
     <tr>
       <td colspan="12" rowspan="2" style="border:0;"></td>
       <th>지원분야</th>
@@ -35,8 +44,7 @@
       <td colspan="2">123</td>
     </tr>
     <tr>
-      <th colspan="3" rowspan="6">
-        <img src="IMG_0173.jpg" width="80px" height="100px">
+      <th colspan="3" rowspan="6" id="img1">
       </th>
       <td rowspan="6" style="border:0; width: 10px;"></td>
       <th colspan="3">이름</th>
