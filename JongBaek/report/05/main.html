@@ -11,9 +11,21 @@
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
   <title>쇼 핑 몰</title>
+  <style>
+    #carousel_01 {
+      position: absolute;
+      top: 80px;
+      left: 13%;
+    }
+  </style>
+  <script>
+    function pop_up() {
+      window.open("pop_up.html", "pop1", "width=400, height=500, toolbar=no, scrollbars=yes, status=no, location=no");
+    }
+  </script>
 </head>
 
-<body>
+<body onload="pop_up()">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="main.html">쇼핑몰</a>
@@ -24,30 +36,83 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="list.html">상품</a>
+            <a class="nav-link" href="main.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="signUp.html">회원가입</a>
+            <a class="nav-link" href="list.html">상품</a>
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <a href="log_in.html">
+            <button type="button" class="btn btn-info" style="text-decoration: none;">
+              Log_in</button>
+          </a>
+          &nbsp;
+          <a href="signUp.html">
+            <button type="button" class="btn btn-warning" style="text-decoration: none;">
+              Sign_up</button>
+          </a>
         </form>
       </div>
     </div>
   </nav>
 
-
-
-
-
-
-
-
-
-
-
+  <div class="container" id="carousel_01" style="margin: 30px;">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card mb-3">
+            <a href="list_01.html" style="text-decoration: none; color: white;">
+              <img src="img/img01_01.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">라베키아 발사믹 비네거 100년산, 125ml, 1개</h5>
+                <p class="card-text">
+                <p style="color: red;">871,520원 <strong style="color: blue;">로켓배송</strong><br>
+                  <small>(100ml당 697,216원)</small>
+                </p>
+                <p style="color: green;">내일(금) 4/16 도착 보장</p>
+                <p style="color: green;"><strong style="color: blue">로켓직구 </strong>내일(금) 새벽 도착 보장</p>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card mb-3">
+            <a href="list_03.html" style="text-decoration: none; color: white;">
+              <img src="img/img02_01.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">황칠가 120장생 황칠 신명고, 500g, 1개</h5>
+                <p class="card-text">
+                <p style="color: red;">680,000원 <strong style="color: blue;">로켓배송</strong><br>
+                  <small>(10g당 13,600원)</small>
+                </p>
+                <p style="color: green;">내일(금) 4/16 도착 보장</p>
+                <p style="color: green;"><strong style="color: blue">로켓직구 </strong>내일(금) 새벽 도착 보장</p>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
 
   <!-- Optional JavaScript; choose one of the two! -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
