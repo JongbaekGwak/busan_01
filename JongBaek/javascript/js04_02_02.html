@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>title name</title>
+
+  <script>
+    // 문제 2) 사용자 입력을 통해서 국어, 영어, 수학에 점수를 각각 입력받고, 총 점수 및 평균 점수를 출력하는 프로그램을 작성하세요
+    // 총 점수 및 평균을 구하는 부분을 함수로 구현
+    // 함수명 : scoreTotalAvg
+
+
+    var korScore = prompt("국어 점수를 입력하세요");
+    korScore = Number(korScore);
+    console.log("국어 점수는 " + korScore + "입니다.")
+    var mathScore = prompt("수학 점수를 입력하세요");
+    mathScore = Number(mathScore);
+    console.log("수학 점수는 " + mathScore + "입니다.")
+    var engScore = prompt("영어 점수를 입력하세요");
+    engScore = Number(engScore);
+    console.log("영어 점수는 " + engScore + "입니다.")
+
+    
+    function scoreTotalAvg(a, b, c) {
+      console.log("총 점수는 : " + (a + b + c) + "이고");
+      console.log("평균 점수는 : " + ((a + b + c) / 3) + "입니다.");
+    }
+
+    scoreTotalAvg(korScore, mathScore, engScore);
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

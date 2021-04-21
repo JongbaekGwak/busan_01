@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>title name</title>
+
+  <script>
+    // 문제 1) 사칙 연산을 하는 함수를 생성하여 결과 값을 출력 하세요
+    // 함수의 4가지 형태에 따라서 4개씩 총 16개의 함수를 생성하여 호출
+    // 반환값이 있는 함수의 경우 함수 내에서 결과값을 출력하지 않고 외부 변수에서 받아서 대신 실행하도록 함
+    // sum1(덧셈), sub1(뺄셈), multi1(곱셈), div1(나눗셈), sum2, sub2, multi2, div2, sum3, sub3, multi3, div3, sum4, sub4, multi4, div4
+
+    function sum1() {
+      var a = 10;
+      var b = 20;
+      console.log(a + b);
+    }
+
+    function sub1() {
+      var a = 10;
+      var b = 20;
+      console.log(a - b);
+    }
+
+    function multi1() {
+      var a = 10;
+      var b = 20;
+      console.log(a * b);
+    }
+
+    function div1() {
+      var a = 10;
+      var b = 20;
+      console.log(a / b);
+    }
+
+    sum1();
+    sub1();
+    multi1();
+    div1();
+
+
+    function sum2(a, b) {
+      console.log(a + b);
+    }
+
+    function sub2(a, b) {
+      console.log(a - b);
+    }
+
+    function multi2(a, b) {
+      console.log(a * b);
+    }
+
+    function div2(a, b) {
+      console.log(a / b);
+    }
+
+    sum2(10, 20);
+    sub2(10, 20);
+    multi2(10, 20);
+    div2(10, 20);
+
+
+    function sum3() {
+      var a = 10;
+      var b = 20;
+      return a + b;
+    }
+
+    function sub3() {
+      var a = 10;
+      var b = 20;
+      return a - b;
+    }
+
+    function multi3() {
+      var a = 10;
+      var b = 20;
+      return a * b;
+    }
+
+    function div3() {
+      var a = 10;
+      var b = 20;
+      return a / b;
+    }
+
+    var reslut = sum3();
+    console.log(reslut);
+    var reslut = sub3();
+    console.log(reslut);
+    var reslut = multi3();
+    console.log(reslut);
+    var reslut = div3();
+    console.log(reslut);
+
+
+    function sum4(a, b) {
+      return a + b;
+    }
+
+    function sub4(a, b) {
+      return a - b;
+    }
+
+    function multi4(a, b) {
+      return a * b;
+    }
+
+    function div4(a, b) {
+      return a / b;
+    }
+
+    var reslut = sum4(10, 20);
+    console.log(reslut);
+    var reslut = sub4(10, 20);
+    console.log(reslut);
+    var reslut = multi4(10, 20);
+    console.log(reslut);
+    var reslut = div4(10, 20);
+    console.log(reslut);
+
+
+    console.log("\n\n---------- 함수 사용하기 -----------\n\n")
+
+    // prompt() : 자바스크립트에서 사용자 입력을 함수, 문자열로 데이터를 받아옴
+
+    function kukbab(like) {
+      if (like == "국밥") {
+        console.log("오늘 점심은 국밥입니다.");
+      }
+      else {
+        console.log("오늘 점심은 정식 백반입니다.");
+      }
+    }
+
+    var result = prompt("오늘 점심 메뉴를 입력하세요", "국밥");
+
+    kukbab(result);
+
+    console.log("\n\n---------- 함수 1 -----------\n\n")
+
+
+    function funcscore(score) {
+      if (score > 90) {
+        console.log("당신의 점수는 " + score + "이고, A학점 입니다.");
+      }
+      else if (score > 80) {
+        console.log("당신의 점수는 " + score + "이고, B학점 입니다.");
+      }
+      else if (score > 70) {
+        console.log("당신의 점수는 " + score + "이고, C학점 입니다.");
+      }
+      else if (score > 60) {
+        console.log("당신의 점수는 " + score + "이고, D학점 입니다.");
+      }
+      else {
+        console.log("당신의 점수는 " + score + "이고, F학점 입니다.");
+      }
+    }
+    var score = prompt("점수를 입력해주세요 : ", "87");
+    score = Number(score);
+
+    funcscore(score);
+
+    score = prompt("점수를 입력해주세요 : ");
+    funcscore(score);
+
+
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
