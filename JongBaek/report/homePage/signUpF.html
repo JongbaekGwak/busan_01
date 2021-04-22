@@ -12,6 +12,11 @@
 
   <title>AION</title>
   <style>
+    body {
+      background: rgba(0, 0, 0, 0.900);
+      text-align: center;
+    }
+
     .nav1 {
       background: skyblue;
     }
@@ -26,9 +31,9 @@
           <img src="img/logo-aion.png" alt="AION" width="150px">
         </a>
         <form class="d-flex">
-          <button class="btn btn-primary" type="submit" onclick="location.href='signIn.html'">로그인</button>
+          <button class="btn btn-primary" type="button" onclick="location.href='signIn.html'">로그인</button>
           &nbsp;
-          <button class="btn btn-info" type="submit" onclick="location.href='signUn.html'">회원가입</button>
+          <button class="btn btn-info" type="button" onclick="location.href='signUp.html'">회원가입</button>
         </form>
       </div>
     </nav>
@@ -69,6 +74,15 @@
         <button class="btn btn-success" type="submit">다운로드</button>
       </div>
     </nav>
+  </section>
+
+  <section style="margin-top: 3%;">
+    <h3 style="color: white;">회원가입 완료</h3>
+    <br>
+    <p style="color: gray;">AION 에 가입되었습니다.</p>
+    <p style="color: gray;">회원가입해 주셔서 감사합니다.</p>
+    <br>
+    <button class="btn btn-primary" style="width: 20%; height: 50px; font-size: 1.5em;" onclick="location.href='signIn.html'">시작하기</button>
   </section>
 
 
