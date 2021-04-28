@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>title name</title>
+
+  <script>
+    // 문제 4) 문제 3의 소스내용을 수정하여 사용자 입력부분과 총합 및 평균을 내는 부분을 함수로 만들어서 실행하는 프로그램으로 수정하세요
+    // 함수명 inputScore, totalScore, avgScore
+
+
+
+    function score() {
+      var inputScore = [];
+      var totalScore = 0;
+      var avgScore = 0;
+      var sub;
+
+      inputScore.length = prompt("과목수를 입력하세요");
+
+      for (var i = 0; i < inputScore.length; i++) {
+        sub = prompt("과목을 입력해 주세요");
+        inputScore[i] = prompt("점수를 입력하세요");
+        inputScore[i] = Number(inputScore[i]);
+        console.log(sub + " 점수는 " + inputScore[i] + " 입니다.");
+        totalScore = totalScore + inputScore[i];
+      };
+
+      avgScore = totalScore / inputScore.length;
+
+      console.log("총 점수는 " + totalScore + " 입니다.")
+      console.log("평균 점수는 " + avgScore + " 입니다.")
+    };
+
+
+
+    score();
+
+
+
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

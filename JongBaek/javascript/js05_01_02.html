@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>title name</title>
+
+  <script>
+    // 문제 3) 사용자 입력을 통해서 국어, 영어, 수학 과목의 점수를 입력받고, 입력 받은 점수를 배열 scores에 차례대로 저장한 후 총점과 편균값을 출력하는 프로그램을 작성하세요
+
+    var scores = ["국어", "영어", "수학"];
+    var score = 0;
+
+    scores[0] = prompt("국어 점수를 입력해 주세요");
+    scores[0] = Number(scores[0]);
+    scores[1] = prompt("국어 점수를 입력해 주세요");
+    scores[1] = Number(scores[0]);
+    scores[2] = prompt("국어 점수를 입력해 주세요");
+    scores[2] = Number(scores[0]);
+
+    for (var i = 0; i < scores.length; i++) {
+      score = score + scores[i];
+    };
+
+    console.log("국어 점수는 " + scores[0] + " 입니다.");
+    console.log("영어 점수는 " + scores[1] + " 입니다.");
+    console.log("수학 점수는 " + scores[2] + " 입니다.");
+
+    console.log("총 점수는 " + score + " 입니다.");
+    console.log("평균 점수는 " + (score / scores.length) + " 입니다.");
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
