@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <script src='jquery-3.6.0.js'></script>
+  <title>title name</title>
+
+  <script>
+    // 자바스크립트의 이벤트
+    // 일반적인 html 의 이벤트
+    // onchange : html 요소가 변경 되었을 경우
+    // onclick : 사용자가 html 요소를 클릭했을 경우 발생
+    // onmouseover : 사용자가 html 요소 위로 마우스 포인터를 이동했을경우
+    // onmouseout : 사용자가 html 요소 위에 있던 마우스 포인터를 밖으로 이동했을 경우
+    // onkeydown : 사용자가 키보드 키를 눌었을 경우
+    // 추가 이벤트는 mbn에서 확인
+    // https://developer.mozilla.org/ko/docs/Web/Events
+
+    // 이벤트는 기본 자바스크립트를 사용하는 것보다 jQuery를 사용하는 것이 더 쉽게 사용할 수 있음
+  </script>
+
+</head>
+
+<body>
+  <button id="btn1">자바스크립트로 이벤트 발생</button>
+  <button id="btn2">jQuery로 이벤트 발생</button>
+
+  <script>
+    var btn1 = document.getElementById("btn1");
+    btn1.addEventListener("click", function () {
+      alert("자바스크립트로 alert 실행");
+    });
+
+    $("#btn2").on("click", function() {
+      alert("jQuery로 alert 실행");
+    });
+  </script>
+</body>
+
+</html>
