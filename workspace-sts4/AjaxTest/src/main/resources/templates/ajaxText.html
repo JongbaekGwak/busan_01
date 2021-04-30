@@ -3,11 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>title name</title>
+  <title>Ajax 테스트</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <script>
+    // 동기 통신 방식 : 클라이언트가 서버로 신호를 보낸 후 응답을 받을 때까지 어떠한 작업도 하지 않고 대기하고 있다가 서버에서 응답을 보낼 경우 처리를 하는 방식
+    // 비동기 통식 방식 : 클라이언트가 서버로 신호를 보낸 후 이벤트 리스너에 응답 이벤트를 등록하고 자신은 다른 작업을 계속 진행하다가 서버에서 응답하여 이벤트가 밸생하면 신호를 받아서 처리를 하는 방식
+    
     $(function () {
       $("#btnSend").on("click", function () {
         var datas = { num1: $("#num1").val(), num2: $("#num2").val() };
