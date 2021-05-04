@@ -15,39 +15,51 @@ public class AjaxController {
 
 	@RequestMapping("/")
 	public String index() throws Exception {
+		
 		return "/index";
 	}
-
-	@RequestMapping("/calsum.do")
+	
+	@RequestMapping("/calSum.do")
 	public String sum() throws Exception {
-
+		
 		return "/sum";
 	}
-
+	
 	@RequestMapping("/result.do")
 	public ModelAndView result(SumDto item) throws Exception {
 		ModelAndView mv = new ModelAndView("/result");
-
+		
 		item.setResult(item.getNum1() + item.getNum2());
 		mv.addObject("data", item);
-
+		
 		return mv;
 	}
-
-	@RequestMapping(value = "/ajaxText.do", method = RequestMethod.GET)
-	public String ajaxText() throws Exception {
-		return "/ajaxText";
+	
+	@RequestMapping(value="/ajaxTest.do", method=RequestMethod.GET)
+	public String ajaxTest() throws Exception {
+		return "/ajaxTest";
 	}
-
+	
 	@ResponseBody
-	@RequestMapping(value = "/ajaxTextSum.do", method = RequestMethod.POST)
+	@RequestMapping(value="/ajaxTestSum.do", method=RequestMethod.POST)
 	public Object ajaxTextSum(SumDto item) throws Exception {
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("num1", item.getNum1());
 		map.put("num2", item.getNum2());
 		map.put("result", item.getNum1() + item.getNum2());
-
+		
 		return map;
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
